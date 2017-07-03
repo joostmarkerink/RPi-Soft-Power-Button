@@ -6,7 +6,7 @@ It uses 2 raspberry pi GPIO pins, a NAND logic IC and 2 pull down resistors.
 
 ![Circuit using the 74HC132 IC](https://www.dropbox.com/s/bjusklx78ebmc5q/Bestand%2003-07-17%2018%2042%2035.jpeg?dl=1)
 
-The IC can be a 74HC00 or 74HC132. We only need 2 of the 4 dual input NAND gates and need to operate at 3.3 volts.
+The IC can be a 74HC00 or 74HC132. Only 2 of the 4 dual input NAND gates are needed and they need to operate at 3.3 volts.
 
 # The Wiring
 ![Wiring](https://raw.githubusercontent.com/joostmarkerink/RPi-Soft-Power-Button/master/IMG_0406.PNG)
