@@ -42,3 +42,5 @@ sudo shutdown now
 ```
 
 when the Raspberry Pi stopped blinking its LEDS press the button and it should boot!
+And after it is booted, press the button again and it should shutdown the Pi!
+
