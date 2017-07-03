@@ -11,6 +11,34 @@ The IC can be a 74HC00 or 74HC132. We only need 2 of the 4 dual input NAND gates
 # The Wiring
 ![Wiring](https://raw.githubusercontent.com/joostmarkerink/RPi-Soft-Power-Button/master/IMG_0406.PNG)
 
+# Installing
 
+The bash script uses WiringPi to access the GPIO pins. 
+Installation instructions for wiring pi are shown here: http://wiringpi.com/download-and-install/ .
 
-todo: installation instructions
+download the bashscript:
+```sh 
+wget "https://raw.githubusercontent.com/joostmarkerink/RPi-Soft-Power-Button/master/softShutDown.sh"
+```
+make it executable:
+```sh 
+chmod 755 softShutDown.sh
+```
+
+Make the script run at startup:
+```sh 
+sudo nano /etc/rc.local
+```
+
+add the folowing line somewhere before "exit 0":
+```sh 
+sudo /home/pi/softShutDown.sh &
+```
+ctrl+x then Y to save and exit
+
+test it:
+```sh
+sudo shutdown now
+```
+
+when the Raspberry Pi stopped blinking its LEDS press the button and it should boot!
