@@ -4,6 +4,10 @@ and a pulse to the "Run" pin (p6) when it is not running.
 
 It uses 2 raspberry pi GPIO pins, a NAND logic IC and 2 pull down resistors.
 
+How it works:
+One Pi GPIO pin will output 3.3 volts while it is running. When the Pi is off, this pin will be pulled down to GND by a resistor. One NAND gate inverts this pin and sends it to terminal A of the second NAND gate. and the button will send a 3.3 volts to terminal B of the second NAND gate. And the output of the second NAND gate is connected to the "Run" (p6) pin. 
+(While writing this, I guess I could use only 1 NAND gate,  I will investigate this)
+
 ![Circuit using the 74HC132 IC](https://www.dropbox.com/s/bjusklx78ebmc5q/Bestand%2003-07-17%2018%2042%2035.jpeg?dl=1)
 
 The IC can be a 74HC00 or 74HC132. Only 2 of the 4 dual input NAND gates are needed and they need to operate at 3.3 volts.
